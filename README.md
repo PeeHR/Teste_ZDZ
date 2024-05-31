@@ -11,8 +11,9 @@ SISTEMA ANTERIOR (JavaFX):
 
 DEER banco de dado (MySQL):
 
-![image](https://github.com/PeeHR/PJ_SAPATEK/assets/128930886/58ed5401-e2ca-4cda-ac78-3c8a0f0e1774)
+![image](https://github.com/PeeHR/PJ_SAPATEK/assets/128930886/f8da6c3a-1535-4faa-b466-532633b36268)
 
 Diagrama de classes: (Draw.io):
 
-![image](https://github.com/PeeHR/PJ_SAPATEK/assets/128930886/931434dd-4dd5-423d-b447-7b926fa4738f)
+![image](https://github.com/PeeHR/PJ_SAPATEK/assets/128930886/50c093ab-3ae9-4987-87ef-18c2009c2157)
+
