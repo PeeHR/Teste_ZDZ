@@ -1,0 +1,60 @@
+
+
+
+<template>
+  <v-row justify="center" align="center">
+    <v-col cols="12" sm="8" md="6">
+      <v-card class="logo py-4 d-flex justify-center">
+       <img src="foto.jpeg" alt="center">
+      </v-card>
+      <v-card>
+        <v-card-title class="headline">
+          Seja Bem vindo ao meu texte ZDZ!
+        </v-card-title>
+        <v-card-text>
+          <p>Meu nome e Pedro Vinicius</p>
+          <p> Para acessar meu GitHub Clique aqui: <a
+              href="https://github.com/PeeHR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub
+              
+            </a>. 
+          </p>
+          <p>
+            Meu numero de contato esta abaixo tambem! <a
+              href="https://wa.me/5531994548735?text=Ol%C3%A1+voc%C3%AA+est%C3%A1+sendo+direcionado+para+o+Pedro%21"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="chat"
+            >
+              WhatsApp
+            </a>.
+          </p>
+          
+          <p>Desde já agradeço a atenção!</p>
+          <div class="text-xs-right">
+            <em><small>&mdash; Pedro Vinicius da Silva Costa (Junior Develop)</small></em>
+          </div>
+          
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            nuxt
+            to="/produtos"
+          >
+            Continue
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+export default {
+  name: 'IndexPage'
+}
+</script>

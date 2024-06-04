@@ -1,0 +1,90 @@
+<template>
+    <v-form ref="form" prevent.submit>
+
+        <v-toolbar density="compact" :elevation="8"> Cadastro de produtos </v-toolbar>
+        <v-container>
+
+            <v-row>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.nome" :rules="nameRules" :counter="2"
+                        label="Nome do produto" hide-details required></v-text-field> </v-col>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.quantidade" :rules="nameRules" :counter="2"
+                        label="Quantidade" hide-details required></v-text-field></v-col>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.preco" :rules="nameRules" :counter="2"
+                        label="Preço" hide-details required></v-text-field></v-col>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.descricao" :rules="nameRules" :counter="2"
+                        label="Descrição do produto" hide-details required></v-text-field></v-col>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.categoria_nome" label="Informe a categoria"
+                        hide-details required></v-text-field></v-col>
+                <v-col cols="12" md="4"><v-text-field v-model="produtos.tipo" label="Tipo do produto" hide-details
+                        required></v-text-field></v-col>
+            </v-row>
+            <v-container></v-container>
+
+            <v-btn class="mt-4" @click="teste()">cadastrar</v-btn>
+            <v-btn class="mt-4" @click="clear()">Limpar</v-btn>
+
+        </v-container>
+        
+    </v-form>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+    data: () => ({
+
+        produtos: {
+
+            nome: '',
+            quantidade: '',
+            preco: '',
+            descricao: '',
+            categoria: '',
+            tipo: '',
+
+        },
+
+        valid: false,
+        nome: '',
+        quantidade: '',
+        preco: '',
+        descricao: '',
+        categoria: '',
+        tipo: '',
+        nameRules: [
+            value => {
+                if (value) return true
+
+                return 'Name is required.'
+            },
+        ],
+
+        teste: async function () {
+        
+            
+
+            let bodyContent = this.produtos
+
+            let reqOptions = {
+                url: "https://localhost:7001/ControllerZDZ/produtos",
+                method: "POST",
+        
+                data: bodyContent,
+            }
+
+            let response = await axios.request(reqOptions);
+            console.log(response.data);
+            
+            this.$refs.form.reset()
+      
+        },
+
+        clear () {
+        this.$refs.form.reset()
+      },
+  
+
+    })
+}
+</script>
